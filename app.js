@@ -8,7 +8,7 @@ form.addEventListener('submit', async function (e) {
     const res = await axios.get(`http://api.tvmaze.com/search/shows?q=${searchTerm}`);
     console.log(res.data);
     showResult(res);
-    userInput.value.innerText = "";
+    userInput.value= "";
 
 })
 
@@ -22,6 +22,8 @@ function showResult(res) {
     }
     for (result of res.data) {
         const resultDiv = document.createElement("div");
+        const resultDiv2 = document.createElement("div");
+        const resultDiv3 = document.createElement("div");
         const resultTitle = document.createElement("h2");
         resultTitle.innerText = result.show.name;
         const resultImg = document.createElement("img");
@@ -33,11 +35,13 @@ function showResult(res) {
         }
         const paragraph = document.createElement("p");
         paragraph.innerHTML = result.show.summary;
+        resultDiv3.classList= "movieContainer";
+        paragraph.classList = "movieSummary";
         resultDiv.append(resultTitle);
         resultDiv.append(resultImg);
-        resultDiv.append(paragraph);
-
-        resultContainer.append(resultDiv);
+        resultDiv2.append(paragraph);
+        resultDiv3.append(resultDiv);
+        resultDiv3.append(resultDiv2);
+        resultContainer.append(resultDiv3);
     }
-
 }

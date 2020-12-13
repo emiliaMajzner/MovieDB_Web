@@ -1,17 +1,13 @@
 body {
     margin: 0;
-    margin-top: 100px;
+    margin-top: 5rem;
     background-color: antiquewhite;
 }
-#container {
-    display: flex;
-    height: auto;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-#container div{
+#container{
+    width: 60vw;
+    background-color: white;
     text-align: center;
-    width: 600px;
+    margin: auto;
 }
 nav {
     text-align: center;
@@ -22,14 +18,11 @@ nav {
     justify-content: space-around;
     width: 100vw;
     background-color: rgb(161, 150, 135);
+    height: 5rem;
 }
 img {
     width: 220px;
     height: 300px;
-}
-#container div:hover{
-    color:white;
-    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
 }
 nav button{
     color: white;
@@ -50,4 +43,17 @@ nav input{
 h1{
     color: white;
     font-weight: 500;
+}
+h2{
+    color: white;
+}
+.movieContainer{
+    background-color: black;
+    display: flex;
+}
+.movieSummary{
+    color: white;
+    text-align: center;
+    padding: 1em;
+    margin: auto;
 }
